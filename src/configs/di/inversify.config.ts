@@ -1,0 +1,19 @@
+import 'reflect-metadata'
+// import { container, setContainer } from 'inversify-props'
+import { Container } from 'inversify'
+import { TYPES } from './types'
+import {
+  HelloInterface
+} from '~/configs/di/interfaces'
+import { Hello } from '~/services/hello'
+import UserInterface from '~/services/user/user.interface'
+import { User } from '~/services/user/user'
+const myContainer = new Container()
+// setContainer({})
+myContainer.bind<HelloInterface>(TYPES.HelloInterface).to(Hello)
+myContainer.bind<UserInterface>(TYPES.UserInterface).to(User)
+// setContainer(myContainer)
+// container.addSingleton<HelloInterface>(Hello, TYPES.HelloInterface)
+// container.addSingleton<UserInterface>(User, TYPES.UserInterface)
+// console.log(myContainer)
+export { myContainer }
