@@ -3,6 +3,6 @@ export interface Context {
   $axios: NuxtAxiosInstance
 }
 declare module '*.json' {
-  const data: any;
-  export default data;
+  const data: any
+  export default data
 }

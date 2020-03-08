@@ -1,6 +1,10 @@
 # nuxtjs 依赖注入
-安装  
-yarn add inversify reflect-metadata 
+准备
+
+安装 
+yarn add inversify reflect-metadata vue-inversify-decorator
+
+配置
 
 # nuxt-express-ts
 
@@ -36,7 +40,9 @@ For detailed explanation on how things work, checkout [Nuxt.js docs](https://nux
 - @nuxt/typescript-runtime
 - ts-node
 - @nuxt/typescript-build
-- vue-property-decorator
+- inversify
+- reflect-metadata
+- vue-inversify-decorator
 
 > 首先安装以上支持包
 
